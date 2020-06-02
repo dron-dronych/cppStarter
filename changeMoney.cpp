@@ -1,10 +1,13 @@
+// implementation of the greedy algorithm to find minimum num of coins
+// to exchange the input m in the range [1, 1000]
+
 #include <iostream>
 #include <algorithm>
 using namespace std;
 
 int changeMoney(int m) {
 	if(m < 1 || m > 1000) {
-		return 1;
+		throw "Input is out of range [1, 1000]";
 	}
 	int denominations [3] = {1, 5, 10};
 	int remainder = m;
@@ -46,7 +49,12 @@ int changeMoney(int m) {
 }
 
 int main() {
-	int coins = changeMoney(999);
-	cout << coins << endl;
+	try {
+		int coins = changeMoney(999);
+		cout << coins << endl;		
+	} catch (const char* msg) {
+		cerr << msg << endl;
+	}
+	
 	return 0;
 }
