@@ -15,7 +15,7 @@ int changeMoney(int m) {
 		int ids [3];
 		int pos = 0;
 
-		for(int d=0; d<sizeof(denominations); d++) {
+		for(int d=0;  d < (sizeof(denominations) / sizeof(*denominations)); d++) {
 			if(remainder - d >= 0) {
 				diffs[d] = m - denominations[d];
 				ids[d] = pos;
@@ -26,6 +26,10 @@ int changeMoney(int m) {
 			}
 		}
 		
+		// for(int d=0;  d < (sizeof(diffs) / sizeof(*diffs)); d++) {
+		// 	cout << diffs[d] << endl;
+		// }
+
 		int *min = min_element(begin(diffs), end(diffs));
 		int bestPosition;
 
@@ -33,6 +37,7 @@ int changeMoney(int m) {
 		for (int i=0; i < sizeof(diffs); i++) {
 			if (diffs[i] == *min) {
 				bestPosition = i;
+				break;
 			}
 		}
 
@@ -47,7 +52,7 @@ int changeMoney(int m) {
 }
 
 int main() {
-	int coins = changeMoney(10);
+	int coins = changeMoney(9);
 	cout << coins << endl;
 	return 0;
 }
