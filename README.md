@@ -11,3 +11,7 @@ Long-lived dream to learn the powerful beast, C++.
 
 more thoughts to come...
 
+Source in this repository is compiled in the most basic way for now, no extra compiler flags or the C++ standard reference flags:
+
+`clang++ [sourceFileName.cpp] -o sourceFileName`
+
