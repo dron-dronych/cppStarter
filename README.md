@@ -14,4 +14,5 @@ more thoughts to come...
 Source in this repository is compiled in the most basic way for now, no extra compiler flags or the C++ standard reference flags:
 
 `clang++ [sourceFileName.cpp] -o sourceFileName`
+`g++ [sourceFileName.cpp] -o sourceFileName`
 
