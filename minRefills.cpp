@@ -11,6 +11,19 @@ int minRefills(int distance, int capacity, int n_stops, ...) {
 	stops[0] = 0;
 	stops[n_stops + 1] = distance;
 
+	if (distance < 1 || distance > 10^5) {
+		throw "Distance is out of range [1, 100000]";
+	}
+
+	if (capacity < 1 || capacity > 400) {
+		throw "Capacity is out of range [1, 400]";
+	}
+
+	if (n_stops < 1 || n_stops > 300) {
+		throw "Num of stops out of range [1, 300]";
+	
+	}
+
 	for (int i = 1; i <= n_stops; i++) {
 		stops[i] = va_arg(arguments, int);
 	}
