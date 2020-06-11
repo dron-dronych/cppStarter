@@ -11,7 +11,7 @@ int minRefills(int distance, int capacity, int n_stops, ...) {
 	stops[0] = 0;
 	stops[n_stops + 1] = distance;
 
-	if (distance < 1 || distance > 10^5) {
+	if (distance < 1 || distance > 100000) {
 		throw "Distance is out of range [1, 100000]";
 	}
 
