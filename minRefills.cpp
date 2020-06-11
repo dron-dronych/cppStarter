@@ -23,9 +23,13 @@ int minRefills(int distance, int capacity, int n_stops, ...) {
 		throw "Num of stops out of range [1, 300]";
 	
 	}
-
+	
 	for (int i = 1; i <= n_stops; i++) {
 		stops[i] = va_arg(arguments, int);
+
+		if (stops[i] <= stops[i-1]) {
+			throw "Every next stop must be > than previous!";
+		}
 	}
 
 	va_end(arguments);
