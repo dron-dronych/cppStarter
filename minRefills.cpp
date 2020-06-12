@@ -3,6 +3,10 @@
 
 using namespace std;
 
+/*
+calculates min number of refills required to travel
+from A to B, with gas station stops along the way
+ */
 int minRefills(int distance, int capacity, int n_stops, ...) {
 	va_list arguments;
 	va_start(arguments, n_stops);
