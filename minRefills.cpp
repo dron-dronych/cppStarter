@@ -36,6 +36,10 @@ int minRefills(int distance, int capacity, int n_stops, ...) {
 		}
 	}
 
+	if (distance <= stops[n_stops]) {
+		throw "Destination must be greater than the final gas station!";
+	}
+
 	va_end(arguments);
 
 	int position = 0;
