@@ -5,11 +5,42 @@ such that the sum of their products is maximized.
  
  implemented with data structures from stdlib
  */
- 
- int minAdvertisementRevenue() {
+
+#include <vector>
+#include <bits/stdc++.h>
+using namespace std;
+
+ int minAdvertisementRevenue(int numAds,
+		 vector <int> profits,
+		 vector <int> clicks) {
+	int numProfits = sizeof(profits) / sizeof(profits[0]);
+	int numClicks = sizeof(clicks) / sizeof(clicks[0]);
+	int revenue = 0;
+
+	sort(profits.begin(), profits.begin() + numProfits);
+	sort(clicks.begin(), clicks.begin() + numClicks);
+
+	for (int i; i <= numProfits; i++) {
+		for (int j; j <= numClicks; j++) {
+			if (i != j) {
+				continue;
+			}
+
+			else {
+				revenue += profits[i] * clicks[j];
+			}
+		}
+	}
+
+	return revenue;
+
+	
  }
 
  int main() {
- 	minAdvertisementRevenue();
+	vector <int> profits = {1, 3, -5};
+	vector <int> clicks = {-2, 4, 1};
+
+ 	minAdvertisementRevenue(3, profits, clicks);
  }
 
