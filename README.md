@@ -8,6 +8,8 @@ Long-lived dream to learn the powerful beast, C++.
 -- The world of no exceptions but errors as codes<br>
 -- Compilation for a predefined platform<br>
 -- Linkers, headers, user-defined namespaces, and no garbage collectors with full control of your memory...<br>
+-- Implementation of trivial (not readily available) in other higher level languages operations yourself<br>
+-- 100 lines of code and 900 lines of compilation errors<br>
 
 more thoughts to come...
 
