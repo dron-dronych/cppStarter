@@ -21,3 +21,5 @@ Source in this repository is compiled in the most basic way for now, no extra co
 
 For the code style, I stick to my own guidelines I list in the repository to learn to write good code: [codePerfect](https://github.com/dron-dronych/CodePerfect)
 
+For more C++ oriented styleguides, I will try to stick to the [C++ Guidelines](https://github.com/isocpp/CppCoreGuidelines) repository.
+
