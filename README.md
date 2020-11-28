@@ -17,6 +17,9 @@ Source in this repository is compiled in the most basic way for now, no extra co
 
 `clang++ [sourceFileName.cpp] -o sourceFileName`
 
+`gcc [sourceFileName.c or sourceFileName.cpp] -o sourceFilename`<br>
+the command will itself determine which compiler to use under the hood
+
 `g++ [sourceFileName.cpp] -o sourceFileName`
 
 For the code style, I stick to my own guidelines I list in the repository to learn to write good code: [codePerfect](https://github.com/dron-dronych/CodePerfect)
