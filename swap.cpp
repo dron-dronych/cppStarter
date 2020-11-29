@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-/*void swap(int *a, int *b) {
+void swap(int *a, int *b) {
         int tmp = *a;
-        a = *b;
+        *a = *b;
         *b = tmp;
 
-}*/
+}
 
 void swapRef(int &a, int &b) {
 	int tmp = a;
@@ -20,7 +20,7 @@ int main() {
 	printf("a before swapping: %d\n", a);
 	printf("b before swapping: %d\n", b);
 	
-//	swap(&a, &b);
+	swap(&a, &b);
 
 	printf("a after swapping: %d\n", a);
 	printf("b after swapping: %d\n", b);
